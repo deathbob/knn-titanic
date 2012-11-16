@@ -1,0 +1,960 @@
+total passengers
+891
+asdfasdfasdf
+[-1]
+[[:embarked, :sex], [:embarked, :pclass], [:embarked, :age], [:embarked, :sibsp], [:embarked, :parch], [:embarked, :cabin], [:sex, :pclass], [:sex, :age], [:sex, :sibsp], [:sex, :parch], [:sex, :cabin], [:pclass, :age], [:pclass, :sibsp], [:pclass, :parch], [:pclass, :cabin], [:age, :sibsp], [:age, :parch], [:age, :cabin], [:sibsp, :parch], [:sibsp, :cabin], [:parch, :cabin]]
+live 342
+dead 549
+[:embarked, :sex]
+right 701
+wrong 190
+percentage 0.7867564534231201
+ ---------------------------- embarked, sex takes the lead!
+[:embarked, :pclass]
+right 537
+wrong 354
+percentage 0.6026936026936027
+[:embarked, :age]
+right 474
+wrong 417
+percentage 0.531986531986532
+[:embarked, :sibsp]
+right 377
+wrong 514
+percentage 0.42312008978675647
+[:embarked, :parch]
+right 335
+wrong 556
+percentage 0.3759820426487093
+[:embarked, :cabin]
+right 570
+wrong 321
+percentage 0.6397306397306397
+[:sex, :pclass]
+right 701
+wrong 190
+percentage 0.7867564534231201
+[:sex, :age]
+right 696
+wrong 195
+percentage 0.7811447811447811
+[:sex, :sibsp]
+right 710
+wrong 181
+percentage 0.7968574635241302
+ ---------------------------- sex, sibsp takes the lead!
+[:sex, :parch]
+right 706
+wrong 185
+percentage 0.792368125701459
+[:sex, :cabin]
+right 695
+wrong 196
+percentage 0.7800224466891134
+[:pclass, :age]
+right 599
+wrong 292
+percentage 0.6722783389450057
+[:pclass, :sibsp]
+right 373
+wrong 518
+percentage 0.4186307519640853
+[:pclass, :parch]
+right 584
+wrong 307
+percentage 0.6554433221099888
+[:pclass, :cabin]
+right 594
+wrong 297
+percentage 0.6666666666666666
+[:age, :sibsp]
+right 463
+wrong 428
+percentage 0.5196408529741863
+[:age, :parch]
+right 463
+wrong 428
+percentage 0.5196408529741863
+[:age, :cabin]
+right 617
+wrong 274
+percentage 0.6924803591470258
+[:sibsp, :parch]
+right 366
+wrong 525
+percentage 0.4107744107744108
+[:sibsp, :cabin]
+right 395
+wrong 496
+percentage 0.44332210998877664
+[:parch, :cabin]
+right 605
+wrong 286
+percentage 0.6790123456790124
+[:embarked, :sex, :pclass]
+right 718
+wrong 173
+percentage 0.8058361391694725
+ ---------------------------- embarked, sex, pclass takes the lead!
+[:embarked, :sex, :age]
+right 685
+wrong 206
+percentage 0.7687991021324355
+[:embarked, :sex, :sibsp]
+right 705
+wrong 186
+percentage 0.7912457912457912
+[:embarked, :sex, :parch]
+right 653
+wrong 238
+percentage 0.7328843995510662
+[:embarked, :sex, :cabin]
+right 663
+wrong 228
+percentage 0.7441077441077442
+[:embarked, :pclass, :age]
+right 590
+wrong 301
+percentage 0.6621773288439955
+[:embarked, :pclass, :sibsp]
+right 540
+wrong 351
+percentage 0.6060606060606061
+[:embarked, :pclass, :parch]
+right 558
+wrong 333
+percentage 0.6262626262626263
+[:embarked, :pclass, :cabin]
+right 557
+wrong 334
+percentage 0.6251402918069585
+[:embarked, :age, :sibsp]
+right 503
+wrong 388
+percentage 0.5645342312008979
+[:embarked, :age, :parch]
+right 502
+wrong 389
+percentage 0.5634118967452301
+[:embarked, :age, :cabin]
+right 592
+wrong 299
+percentage 0.6644219977553311
+[:embarked, :sibsp, :parch]
+right 390
+wrong 501
+percentage 0.4377104377104377
+[:embarked, :sibsp, :cabin]
+right 585
+wrong 306
+percentage 0.6565656565656566
+[:embarked, :parch, :cabin]
+right 601
+wrong 290
+percentage 0.6745230078563412
+[:sex, :pclass, :age]
+right 702
+wrong 189
+percentage 0.7878787878787878
+[:sex, :pclass, :sibsp]
+right 703
+wrong 188
+percentage 0.7890011223344556
+[:sex, :pclass, :parch]
+right 706
+wrong 185
+percentage 0.792368125701459
+[:sex, :pclass, :cabin]
+right 690
+wrong 201
+percentage 0.7744107744107744
+[:sex, :age, :sibsp]
+right 713
+wrong 178
+percentage 0.8002244668911336
+[:sex, :age, :parch]
+right 690
+wrong 201
+percentage 0.7744107744107744
+[:sex, :age, :cabin]
+right 687
+wrong 204
+percentage 0.7710437710437711
+[:sex, :sibsp, :parch]
+right 698
+wrong 193
+percentage 0.7833894500561167
+[:sex, :sibsp, :cabin]
+right 712
+wrong 179
+percentage 0.7991021324354658
+[:sex, :parch, :cabin]
+right 694
+wrong 197
+percentage 0.7789001122334456
+[:pclass, :age, :sibsp]
+right 569
+wrong 322
+percentage 0.6386083052749719
+[:pclass, :age, :parch]
+right 600
+wrong 291
+percentage 0.6734006734006734
+[:pclass, :age, :cabin]
+right 617
+wrong 274
+percentage 0.6924803591470258
+[:pclass, :sibsp, :parch]
+right 575
+wrong 316
+percentage 0.6453423120089786
+[:pclass, :sibsp, :cabin]
+right 404
+wrong 487
+percentage 0.45342312008978675
+[:pclass, :parch, :cabin]
+right 589
+wrong 302
+percentage 0.6610549943883277
+[:age, :sibsp, :parch]
+right 541
+wrong 350
+percentage 0.6071829405162739
+[:age, :sibsp, :cabin]
+right 557
+wrong 334
+percentage 0.6251402918069585
+[:age, :parch, :cabin]
+right 510
+wrong 381
+percentage 0.5723905723905723
+[:sibsp, :parch, :cabin]
+right 393
+wrong 498
+percentage 0.44107744107744107
+[:embarked, :sex, :pclass, :age]
+right 721
+wrong 170
+percentage 0.8092031425364759
+ ---------------------------- embarked, sex, pclass, age takes the lead!
+[:embarked, :sex, :pclass, :sibsp]
+right 719
+wrong 172
+percentage 0.8069584736251403
+[:embarked, :sex, :pclass, :parch]
+right 703
+wrong 188
+percentage 0.7890011223344556
+[:embarked, :sex, :pclass, :cabin]
+right 710
+wrong 181
+percentage 0.7968574635241302
+[:embarked, :sex, :age, :sibsp]
+right 709
+wrong 182
+percentage 0.7957351290684624
+[:embarked, :sex, :age, :parch]
+right 700
+wrong 191
+percentage 0.7856341189674523
+[:embarked, :sex, :age, :cabin]
+right 699
+wrong 192
+percentage 0.7845117845117845
+[:embarked, :sex, :sibsp, :parch]
+right 680
+wrong 211
+percentage 0.7631874298540965
+[:embarked, :sex, :sibsp, :cabin]
+right 700
+wrong 191
+percentage 0.7856341189674523
+[:embarked, :sex, :parch, :cabin]
+right 678
+wrong 213
+percentage 0.7609427609427609
+[:embarked, :pclass, :age, :sibsp]
+right 599
+wrong 292
+percentage 0.6722783389450057
+[:embarked, :pclass, :age, :parch]
+right 626
+wrong 265
+percentage 0.7025813692480359
+[:embarked, :pclass, :age, :cabin]
+right 600
+wrong 291
+percentage 0.6734006734006734
+[:embarked, :pclass, :sibsp, :parch]
+right 575
+wrong 316
+percentage 0.6453423120089786
+[:embarked, :pclass, :sibsp, :cabin]
+right 563
+wrong 328
+percentage 0.6318742985409652
+[:embarked, :pclass, :parch, :cabin]
+right 564
+wrong 327
+percentage 0.632996632996633
+[:embarked, :age, :sibsp, :parch]
+right 513
+wrong 378
+percentage 0.5757575757575758
+[:embarked, :age, :sibsp, :cabin]
+right 540
+wrong 351
+percentage 0.6060606060606061
+[:embarked, :age, :parch, :cabin]
+right 612
+wrong 279
+percentage 0.6868686868686869
+[:embarked, :sibsp, :parch, :cabin]
+right 616
+wrong 275
+percentage 0.691358024691358
+[:sex, :pclass, :age, :sibsp]
+right 716
+wrong 175
+percentage 0.8035914702581369
+[:sex, :pclass, :age, :parch]
+right 714
+wrong 177
+percentage 0.8013468013468014
+[:sex, :pclass, :age, :cabin]
+right 688
+wrong 203
+percentage 0.7721661054994389
+[:sex, :pclass, :sibsp, :parch]
+right 711
+wrong 180
+percentage 0.797979797979798
+[:sex, :pclass, :sibsp, :cabin]
+right 713
+wrong 178
+percentage 0.8002244668911336
+[:sex, :pclass, :parch, :cabin]
+right 712
+wrong 179
+percentage 0.7991021324354658
+[:sex, :age, :sibsp, :parch]
+right 729
+wrong 162
+percentage 0.8181818181818182
+ ---------------------------- sex, age, sibsp, parch takes the lead!
+[:sex, :age, :sibsp, :cabin]
+right 712
+wrong 179
+percentage 0.7991021324354658
+[:sex, :age, :parch, :cabin]
+right 692
+wrong 199
+percentage 0.77665544332211
+[:sex, :sibsp, :parch, :cabin]
+right 701
+wrong 190
+percentage 0.7867564534231201
+[:pclass, :age, :sibsp, :parch]
+right 549
+wrong 342
+percentage 0.6161616161616161
+[:pclass, :age, :sibsp, :cabin]
+right 544
+wrong 347
+percentage 0.6105499438832772
+[:pclass, :age, :parch, :cabin]
+right 621
+wrong 270
+percentage 0.696969696969697
+[:pclass, :sibsp, :parch, :cabin]
+right 625
+wrong 266
+percentage 0.7014590347923682
+[:age, :sibsp, :parch, :cabin]
+right 572
+wrong 319
+percentage 0.6419753086419753
+[:embarked, :sex, :pclass, :age, :sibsp]
+right 728
+wrong 163
+percentage 0.8170594837261503
+[:embarked, :sex, :pclass, :age, :parch]
+right 713
+wrong 178
+percentage 0.8002244668911336
+[:embarked, :sex, :pclass, :age, :cabin]
+right 713
+wrong 178
+percentage 0.8002244668911336
+[:embarked, :sex, :pclass, :sibsp, :parch]
+right 712
+wrong 179
+percentage 0.7991021324354658
+[:embarked, :sex, :pclass, :sibsp, :cabin]
+right 717
+wrong 174
+percentage 0.8047138047138047
+[:embarked, :sex, :pclass, :parch, :cabin]
+right 716
+wrong 175
+percentage 0.8035914702581369
+[:embarked, :sex, :age, :sibsp, :parch]
+right 725
+wrong 166
+percentage 0.813692480359147
+[:embarked, :sex, :age, :sibsp, :cabin]
+right 708
+wrong 183
+percentage 0.7946127946127947
+[:embarked, :sex, :age, :parch, :cabin]
+right 685
+wrong 206
+percentage 0.7687991021324355
+[:embarked, :sex, :sibsp, :parch, :cabin]
+right 708
+wrong 183
+percentage 0.7946127946127947
+[:embarked, :pclass, :age, :sibsp, :parch]
+right 613
+wrong 278
+percentage 0.6879910213243546
+[:embarked, :pclass, :age, :sibsp, :cabin]
+right 590
+wrong 301
+percentage 0.6621773288439955
+[:embarked, :pclass, :age, :parch, :cabin]
+right 640
+wrong 251
+percentage 0.7182940516273849
+[:embarked, :pclass, :sibsp, :parch, :cabin]
+right 605
+wrong 286
+percentage 0.6790123456790124
+[:embarked, :age, :sibsp, :parch, :cabin]
+right 599
+wrong 292
+percentage 0.6722783389450057
+[:sex, :pclass, :age, :sibsp, :parch]
+right 722
+wrong 169
+percentage 0.8103254769921436
+[:sex, :pclass, :age, :sibsp, :cabin]
+right 720
+wrong 171
+percentage 0.8080808080808081
+[:sex, :pclass, :age, :parch, :cabin]
+right 706
+wrong 185
+percentage 0.792368125701459
+[:sex, :pclass, :sibsp, :parch, :cabin]
+right 708
+wrong 183
+percentage 0.7946127946127947
+[:sex, :age, :sibsp, :parch, :cabin]
+right 725
+wrong 166
+percentage 0.813692480359147
+[:pclass, :age, :sibsp, :parch, :cabin]
+right 562
+wrong 329
+percentage 0.6307519640852974
+[:embarked, :sex, :pclass, :age, :sibsp, :parch]
+right 731
+wrong 160
+percentage 0.8204264870931538
+ ---------------------------- embarked, sex, pclass, age, sibsp, parch takes the lead!
+[:embarked, :sex, :pclass, :age, :sibsp, :cabin]
+right 718
+wrong 173
+percentage 0.8058361391694725
+[:embarked, :sex, :pclass, :age, :parch, :cabin]
+right 720
+wrong 171
+percentage 0.8080808080808081
+[:embarked, :sex, :pclass, :sibsp, :parch, :cabin]
+right 705
+wrong 186
+percentage 0.7912457912457912
+[:embarked, :sex, :age, :sibsp, :parch, :cabin]
+right 722
+wrong 169
+percentage 0.8103254769921436
+[:embarked, :pclass, :age, :sibsp, :parch, :cabin]
+right 619
+wrong 272
+percentage 0.6947250280583613
+[:sex, :pclass, :age, :sibsp, :parch, :cabin]
+right 721
+wrong 170
+percentage 0.8092031425364759
+[:embarked, :sex, :pclass, :age, :sibsp, :parch, :cabin]
+right 725
+wrong 166
+percentage 0.813692480359147
+embarked
+	-1
+		2 people had -1 for embarked
+		1.0 of those survived
+		2 out of 2
+	0
+		77 people had 0 for embarked
+		0.39 of those survived
+		30 out of 77
+	1
+		168 people had 1 for embarked
+		0.554 of those survived
+		93 out of 168
+	2
+		644 people had 2 for embarked
+		0.337 of those survived
+		217 out of 644
+sex
+	0
+		577 people had 0 for sex
+		0.189 of those survived
+		109 out of 577
+	10
+		314 people had 10 for sex
+		0.742 of those survived
+		233 out of 314
+pclass
+	1
+		216 people had 1 for pclass
+		0.63 of those survived
+		136 out of 216
+	2
+		184 people had 2 for pclass
+		0.473 of those survived
+		87 out of 184
+	3
+		491 people had 3 for pclass
+		0.242 of those survived
+		119 out of 491
+age
+	0
+		241 people had 0 for age
+		0.373 of those survived
+		90 out of 241
+	1
+		116 people had 1 for age
+		0.379 of those survived
+		44 out of 116
+	2
+		231 people had 2 for age
+		0.364 of those survived
+		84 out of 231
+	3
+		155 people had 3 for age
+		0.445 of those survived
+		69 out of 155
+	4
+		84 people had 4 for age
+		0.393 of those survived
+		33 out of 84
+	5
+		42 people had 5 for age
+		0.405 of those survived
+		17 out of 42
+	6
+		18 people had 6 for age
+		0.222 of those survived
+		4 out of 18
+	7
+		4 people had 7 for age
+		0.25 of those survived
+		1 out of 4
+sibsp
+	0
+		608 people had 0 for sibsp
+		0.345 of those survived
+		210 out of 608
+	1
+		209 people had 1 for sibsp
+		0.536 of those survived
+		112 out of 209
+	2
+		28 people had 2 for sibsp
+		0.464 of those survived
+		13 out of 28
+	3
+		16 people had 3 for sibsp
+		0.25 of those survived
+		4 out of 16
+	4
+		18 people had 4 for sibsp
+		0.167 of those survived
+		3 out of 18
+	5
+		5 people had 5 for sibsp
+		0.0 of those survived
+		0 out of 5
+	8
+		7 people had 8 for sibsp
+		0.0 of those survived
+		0 out of 7
+parch
+	0
+		678 people had 0 for parch
+		0.344 of those survived
+		233 out of 678
+	1
+		118 people had 1 for parch
+		0.551 of those survived
+		65 out of 118
+	2
+		80 people had 2 for parch
+		0.5 of those survived
+		40 out of 80
+	3
+		5 people had 3 for parch
+		0.6 of those survived
+		3 out of 5
+	4
+		4 people had 4 for parch
+		0.0 of those survived
+		0 out of 4
+	5
+		5 people had 5 for parch
+		0.2 of those survived
+		1 out of 5
+	6
+		1 people had 6 for parch
+		0.0 of those survived
+		0 out of 1
+cabin
+	-1
+		688 people had -1 for cabin
+		0.299 of those survived
+		206 out of 688
+	0
+		15 people had 0 for cabin
+		0.467 of those survived
+		7 out of 15
+	1
+		47 people had 1 for cabin
+		0.745 of those survived
+		35 out of 47
+	2
+		59 people had 2 for cabin
+		0.593 of those survived
+		35 out of 59
+	3
+		33 people had 3 for cabin
+		0.758 of those survived
+		25 out of 33
+	4
+		33 people had 4 for cabin
+		0.758 of those survived
+		25 out of 33
+	5
+		12 people had 5 for cabin
+		0.583 of those survived
+		7 out of 12
+	6
+		4 people had 6 for cabin
+		0.5 of those survived
+		2 out of 4
+__________________________________________________________________________________________________________________________________________________________
+by embarked, sex
+		441 people had [2, 0] for [:embarked, :sex]
+		0.175 of those survived
+		77 out of 441
+		73 people had [1, 10] for [:embarked, :sex]
+		0.877 of those survived
+		64 out of 73
+		41 people had [0, 0] for [:embarked, :sex]
+		0.073 of those survived
+		3 out of 41
+		36 people had [0, 10] for [:embarked, :sex]
+		0.75 of those survived
+		27 out of 36
+by embarked, pclass
+		353 people had [2, 3] for [:embarked, :pclass]
+		0.19 of those survived
+		67 out of 353
+by embarked, age
+		87 people had [2, 1] for [:embarked, :age]
+		0.287 of those survived
+		25 out of 87
+		14 people had [2, 6] for [:embarked, :age]
+		0.214 of those survived
+		3 out of 14
+by embarked, sibsp
+		16 people had [2, 3] for [:embarked, :sibsp]
+		0.25 of those survived
+		4 out of 16
+		14 people had [2, 4] for [:embarked, :sibsp]
+		0.214 of those survived
+		3 out of 14
+by embarked, parch
+		484 people had [2, 0] for [:embarked, :parch]
+		0.285 of those survived
+		138 out of 484
+		14 people had [1, 2] for [:embarked, :parch]
+		0.714 of those survived
+		10 out of 14
+by embarked, cabin
+		516 people had [2, -1] for [:embarked, :cabin]
+		0.266 of those survived
+		137 out of 516
+		22 people had [1, 1] for [:embarked, :cabin]
+		0.773 of those survived
+		17 out of 22
+		13 people had [1, 3] for [:embarked, :cabin]
+		0.846 of those survived
+		11 out of 13
+by sex, pclass
+		347 people had [0, 3] for [:sex, :pclass]
+		0.135 of those survived
+		47 out of 347
+		94 people had [10, 1] for [:sex, :pclass]
+		0.968 of those survived
+		91 out of 94
+		76 people had [10, 2] for [:sex, :pclass]
+		0.921 of those survived
+		70 out of 76
+		108 people had [0, 2] for [:sex, :pclass]
+		0.157 of those survived
+		17 out of 108
+by sex, age
+		149 people had [0, 2] for [:sex, :age]
+		0.154 of those survived
+		23 out of 149
+		54 people had [10, 3] for [:sex, :age]
+		0.852 of those survived
+		46 out of 54
+		82 people had [10, 2] for [:sex, :age]
+		0.744 of those survived
+		61 out of 82
+		101 people had [0, 3] for [:sex, :age]
+		0.228 of those survived
+		23 out of 101
+		157 people had [0, 0] for [:sex, :age]
+		0.223 of those survived
+		35 out of 157
+		28 people had [0, 5] for [:sex, :age]
+		0.143 of those survived
+		4 out of 28
+		46 people had [10, 1] for [:sex, :age]
+		0.739 of those survived
+		34 out of 46
+		14 people had [10, 5] for [:sex, :age]
+		0.929 of those survived
+		13 out of 14
+		70 people had [0, 1] for [:sex, :age]
+		0.143 of those survived
+		10 out of 70
+		15 people had [0, 6] for [:sex, :age]
+		0.067 of those survived
+		1 out of 15
+		53 people had [0, 4] for [:sex, :age]
+		0.226 of those survived
+		12 out of 53
+by sex, sibsp
+		106 people had [10, 1] for [:sex, :sibsp]
+		0.755 of those survived
+		80 out of 106
+		174 people had [10, 0] for [:sex, :sibsp]
+		0.787 of those survived
+		137 out of 174
+		434 people had [0, 0] for [:sex, :sibsp]
+		0.168 of those survived
+		73 out of 434
+		12 people had [0, 4] for [:sex, :sibsp]
+		0.083 of those survived
+		1 out of 12
+		13 people had [10, 2] for [:sex, :sibsp]
+		0.769 of those survived
+		10 out of 13
+		15 people had [0, 2] for [:sex, :sibsp]
+		0.2 of those survived
+		3 out of 15
+by sex, parch
+		484 people had [0, 0] for [:sex, :parch]
+		0.165 of those survived
+		80 out of 484
+		194 people had [10, 0] for [:sex, :parch]
+		0.789 of those survived
+		153 out of 194
+		60 people had [10, 1] for [:sex, :parch]
+		0.767 of those survived
+		46 out of 60
+by sex, cabin
+		471 people had [0, -1] for [:sex, :cabin]
+		0.136 of those survived
+		64 out of 471
+		27 people had [10, 2] for [:sex, :cabin]
+		0.889 of those survived
+		24 out of 27
+		27 people had [10, 1] for [:sex, :cabin]
+		1.0 of those survived
+		27 out of 27
+		18 people had [10, 3] for [:sex, :cabin]
+		1.0 of those survived
+		18 out of 18
+		16 people had [10, 4] for [:sex, :cabin]
+		0.938 of those survived
+		15 out of 16
+by pclass, age
+		130 people had [3, 2] for [:pclass, :age]
+		0.231 of those survived
+		30 out of 130
+		49 people had [1, 3] for [:pclass, :age]
+		0.755 of those survived
+		37 out of 49
+		63 people had [3, 3] for [:pclass, :age]
+		0.206 of those survived
+		13 out of 63
+		180 people had [3, 0] for [:pclass, :age]
+		0.294 of those survived
+		53 out of 180
+		80 people had [3, 1] for [:pclass, :age]
+		0.25 of those survived
+		20 out of 80
+		12 people had [2, 5] for [:pclass, :age]
+		0.167 of those survived
+		2 out of 12
+		28 people had [2, 0] for [:pclass, :age]
+		0.75 of those survived
+		21 out of 28
+		40 people had [1, 2] for [:pclass, :age]
+		0.725 of those survived
+		29 out of 40
+		18 people had [1, 1] for [:pclass, :age]
+		0.833 of those survived
+		15 out of 18
+		11 people had [1, 6] for [:pclass, :age]
+		0.182 of those survived
+		2 out of 11
+		28 people had [3, 4] for [:pclass, :age]
+		0.071 of those survived
+		2 out of 28
+by pclass, sibsp
+		71 people had [1, 1] for [:pclass, :sibsp]
+		0.746 of those survived
+		53 out of 71
+		351 people had [3, 0] for [:pclass, :sibsp]
+		0.236 of those survived
+		83 out of 351
+		12 people had [3, 3] for [:pclass, :sibsp]
+		0.083 of those survived
+		1 out of 12
+		18 people had [3, 4] for [:pclass, :sibsp]
+		0.167 of those survived
+		3 out of 18
+by pclass, parch
+		381 people had [3, 0] for [:pclass, :parch]
+		0.226 of those survived
+		86 out of 381
+		43 people had [3, 2] for [:pclass, :parch]
+		0.256 of those survived
+		11 out of 43
+		21 people had [1, 2] for [:pclass, :parch]
+		0.762 of those survived
+		16 out of 21
+		16 people had [2, 2] for [:pclass, :parch]
+		0.813 of those survived
+		13 out of 16
+		32 people had [2, 1] for [:pclass, :parch]
+		0.75 of those survived
+		24 out of 32
+by pclass, cabin
+		479 people had [3, -1] for [:pclass, :cabin]
+		0.236 of those survived
+		113 out of 479
+		25 people had [1, 4] for [:pclass, :cabin]
+		0.72 of those survived
+		18 out of 25
+		47 people had [1, 1] for [:pclass, :cabin]
+		0.745 of those survived
+		35 out of 47
+		29 people had [1, 3] for [:pclass, :cabin]
+		0.759 of those survived
+		22 out of 29
+by age, sibsp
+		30 people had [5, 0] for [:age, :sibsp]
+		0.267 of those survived
+		8 out of 30
+		11 people had [0, 3] for [:age, :sibsp]
+		0.0 of those survived
+		0 out of 11
+		45 people had [0, 1] for [:age, :sibsp]
+		0.711 of those survived
+		32 out of 45
+		14 people had [0, 4] for [:age, :sibsp]
+		0.143 of those survived
+		2 out of 14
+		15 people had [6, 0] for [:age, :sibsp]
+		0.2 of those survived
+		3 out of 15
+		11 people had [5, 1] for [:age, :sibsp]
+		0.727 of those survived
+		8 out of 11
+by age, parch
+		15 people had [6, 0] for [:age, :parch]
+		0.267 of those survived
+		4 out of 15
+by age, cabin
+		191 people had [2, -1] for [:age, :cabin]
+		0.283 of those survived
+		54 out of 191
+		16 people had [3, 2] for [:age, :cabin]
+		0.75 of those survived
+		12 out of 16
+		105 people had [3, -1] for [:age, :cabin]
+		0.295 of those survived
+		31 out of 105
+		97 people had [1, -1] for [:age, :cabin]
+		0.299 of those survived
+		29 out of 97
+		20 people had [5, -1] for [:age, :cabin]
+		0.15 of those survived
+		3 out of 20
+		12 people had [3, 1] for [:age, :cabin]
+		0.75 of those survived
+		9 out of 12
+		10 people had [2, 1] for [:age, :cabin]
+		0.8 of those survived
+		8 out of 10
+		10 people had [3, 4] for [:age, :cabin]
+		1.0 of those survived
+		10 out of 10
+by sibsp, parch
+		29 people had [0, 2] for [:sibsp, :parch]
+		0.724 of those survived
+		21 out of 29
+		16 people had [2, 0] for [:sibsp, :parch]
+		0.25 of those survived
+		4 out of 16
+by sibsp, cabin
+		483 people had [0, -1] for [:sibsp, :cabin]
+		0.275 of those survived
+		133 out of 483
+		22 people had [0, 4] for [:sibsp, :cabin]
+		0.773 of those survived
+		17 out of 22
+		13 people had [3, -1] for [:sibsp, :cabin]
+		0.154 of those survived
+		2 out of 13
+		18 people had [4, -1] for [:sibsp, :cabin]
+		0.167 of those survived
+		3 out of 18
+		13 people had [1, 1] for [:sibsp, :cabin]
+		0.846 of those survived
+		11 out of 13
+		14 people had [1, 3] for [:sibsp, :cabin]
+		0.929 of those survived
+		13 out of 14
+		11 people had [1, 4] for [:sibsp, :cabin]
+		0.727 of those survived
+		8 out of 11
+by parch, cabin
+		538 people had [0, -1] for [:parch, :cabin]
+		0.264 of those survived
+		142 out of 538
+		25 people had [0, 3] for [:parch, :cabin]
+		0.8 of those survived
+		20 out of 25
+		11 people had [1, 1] for [:parch, :cabin]
+		0.727 of those survived
+		8 out of 11
