@@ -4,6 +4,8 @@ class Passenger
   @@user_distances = {}
   @@count = 0
 
+  NO_VAL= -1
+
 
 
   attr_accessor :raw_attrs, :arr, :survived, :pclass, :name, :sex, :age, :sibsp, :parch, :ticket, :fare, :cabin, :embarked, :predicted
@@ -39,7 +41,7 @@ class Passenger
   end
 
   def fare=(val)
-    return -1 unless val
+    return NO_VAL unless val
     @fare = case val.to_i
             when 0..10
               1
@@ -94,7 +96,7 @@ class Passenger
            when 100..1000
              10
            else
-             -1
+             NO_VAL
            end
   end
 
@@ -115,7 +117,7 @@ class Passenger
              when /g/i
                6
              else
-               -1
+               NO_VAL
              end
   end
 
@@ -133,7 +135,7 @@ class Passenger
             foo[0] if foo
           end
 
-    return @cabin_number = -1 unless bar
+    return @cabin_number = NO_VAL unless bar
     @cabin_number = case bar.to_i
     when 0..10
       0
@@ -158,7 +160,7 @@ class Passenger
     when 100..1000
       10
     else
-      -1
+      NO_VAL
     end
 
   end
@@ -171,58 +173,58 @@ class Passenger
            when 'female'
              1
            else
-             -1
+             NO_VAL
            end
   end
 
   def embarked=(val)
     @embarked = case val
                 when 'Q'
-                  0
-                when 'C'
                   1
-                when 'S'
+                when 'C'
                   2
+                when 'S'
+                  3
                 else
-                  -1
+                  NO_VAL
                 end
   end
 
   def gimme(ar)
-    return @answers[ar] if @answers[ar]
-    puts 'should not hit this'
+#    return @answers[ar] if @answers[ar]
 
-    @answers[ar] = ar.map{|k| send(k) }
+#    @answers[ar] = ar.map{|k| send(k) }
+    ar.map{|k| send(k) }
   end
 
   def precompute_gimme(ar)
-    (2..ar.count).each do |int|
-      ar.combination(int).to_a.each do |foo|
-        @answers[foo] = foo.map{|x| send(x) }
-      end
-    end
+    # (2..ar.count).each do |int|
+    #   ar.combination(int).to_a.each do |foo|
+    #     @answers[foo] = foo.map{|x| send(x) }
+    #   end
+    # end
   end
 
   def distance_to(user, arr)
     mine = gimme(arr)
     theirs = user.gimme(arr)
-    key = mine.join.to_i
-    t_k = theirs.join.to_i
 
-    if @@user_distances[arr].nil?
-      @@user_distances[arr] = []
-    end
-    if @@user_distances[arr][key].nil?
-      @@user_distances[arr][key] = []
-    end
-    if @@user_distances[arr][key][t_k]
-      return @@user_distances[arr][key][t_k]
-    end
+    # key = mine.join.to_i
+    # t_k = theirs.join.to_i
+    # if @@user_distances[arr].nil?
+    #   @@user_distances[arr] = []
+    # end
+    # if @@user_distances[arr][key].nil?
+    #   @@user_distances[arr][key] = []
+    # end
+    # if @@user_distances[arr][key][t_k]
+    #   return @@user_distances[arr][key][t_k]
+    # end
 
     sum_of_squares = mine.zip(theirs).map{|x| x[0] - x[1]}.map{|x| x ** 2}.reduce(:+)
     ans = Math.sqrt(sum_of_squares)
 
-    @@user_distances[arr][key][t_k] = ans
+#    @@user_distances[arr][key][t_k] = ans
   end
 
   def predicted=(val)

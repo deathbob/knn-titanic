@@ -23,7 +23,7 @@ bats = headers.combination(2).to_a
 puts "live " + live.count.to_s
 puts "dead " + dead.count.to_s
 
-k = 3
+k = 10
 n = 100
 s = headers.count
 
@@ -33,7 +33,7 @@ if profile = false
   require 'ruby-prof'
 end
 
-(2..3).each do |num|
+(2..s).each do |num|
   headers.combination(num).each do |heads|
     puts heads.inspect
 
@@ -63,7 +63,6 @@ end
       printer = RubyProf::FlatPrinter.new(prof_result)
       printer.print(STDOUT)
     end
-    raise 'round 1'
   end
 end
 
