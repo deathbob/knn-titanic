@@ -1,24 +1,18 @@
 require './passenger'
 require 'csv'
-require 'gruff'
+#require 'gruff'
 require 'debugger'
 
 foo = CSV.read('train.csv')
 headers = foo.shift
 
-bar = foo.map{|x| Passenger.new(x)}
-live, dead = bar.partition{|x| x.survived?}
+passengers = foo.map{|x| Passenger.new(Hash[headers.zip(x)])}
+live, dead = passengers.partition{|x| x.survived?}
 
 headers = ["embarked", "sex", "pclass", "age", 'sibsp', 'parch', "cabin", "fare", "cabin_number"].map(&:intern)
 
 puts 'total passengers'
-puts total_passengers = bar.count
-
-bar.each{|x| x.precompute_gimme(headers) }
-
-puts bar.map{|x| x.cabin_number}.uniq.compact.inspect
-
-bats = headers.combination(2).to_a
+puts total_passengers = passengers.count
 
 puts "live " + live.count.to_s
 puts "dead " + dead.count.to_s
@@ -28,29 +22,41 @@ n = 100
 s = headers.count
 
 best = [0, nil]
+snake = true
 
-if profile = false
+profile = false
+if profile
   require 'ruby-prof'
 end
 
-(2..s).each do |num|
+Kernel.trap('INT') do
+  puts
+  puts '*' * 80
+  puts best.inspect
+  puts '*' * 80
+
+  Kernel.exit
+end
+
+(7..s).each do |num|
   headers.combination(num).each do |heads|
     puts heads.inspect
 
     if profile
       RubyProf.start
     end
-    bar.each_with_index do |user, idx|
-      tommy = bar.sort_by{|x| user.distance_to(x, heads)}.take(k)
+    passengers.each do |user|
+      tommy = passengers.sort_by{|x| user.distance_to(x, heads)}.take(k)
       user.predicted = (tommy.reject{|x| x == user}.map{|x| x.survived? == true ? 1 : 0}.reduce(:+) / k.to_f).round
     end
 
-    right, wrong = bar.partition{|x| x.predicted.to_s == x.survived}
+#    puts passengers.map{|x| x.predicted}
 
+    right, wrong = passengers.partition{|x| x.predicted.to_s == x.survived}
 
     puts 'right ' + right.count.to_s
     puts 'wrong ' + wrong.count.to_s
-    percentage = (right.count / bar.count.to_f)
+    percentage = (right.count / passengers.count.to_f)
     puts 'percentage ' + percentage.to_s
     if best[0] < percentage
       best[0] = percentage
@@ -63,8 +69,15 @@ end
       printer = RubyProf::FlatPrinter.new(prof_result)
       printer.print(STDOUT)
     end
+
   end
 end
+
+  puts
+  puts '*' * 80
+  puts best.inspect
+  puts '*' * 80
+
 
 
 # # gruff stuff
@@ -93,10 +106,10 @@ end
 
 headers.each do |header|
   puts header
-  values = bar.map(&header).uniq.sort
+  values = passengers.map(&header).uniq.sort
   values.each do |val|
     puts "\t" << val.to_s
-    cow = bar.select{|x| x.send(header) == val}
+    cow = passengers.select{|x| x.send(header) == val}
     puts "\t\t" << cow.count.to_s <<  " people had #{val} for #{header}"
     puts "\t\t" << (cow.select{|x| x.survived?}.count / cow.count.to_f).round(3).to_s << " of those survived"
     puts "\t\t" << cow.select{|x| x.survived?}.count.to_s << " out of " << cow.count.to_s << "\n"
@@ -108,12 +121,16 @@ end
 
 puts '__________________________________________________________________________________________________________________________________________________________'
 
+bats = headers.combination(2).to_a
+
+
+
 bats.each do |bat|
   puts "by " << bat.join(", ")
-  values = bar.map{|x| x.gimme(bat)}.uniq
+  values = passengers.map{|x| x.gimme(bat)}.uniq
   values.each do |val|
 
-    cow = bar.select{|x| x.send(:gimme, bat) == val}
+    cow = passengers.select{|x| x.send(:gimme, bat) == val}
     live, dead = cow.partition{|x| x.survived?}
     unless cow.count < 10
 

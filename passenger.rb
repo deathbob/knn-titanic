@@ -7,14 +7,21 @@ class Passenger
   NO_VAL= -1
 
 
+  class<< self
+    def headers
+    @headers ||= ["survived", "pclass", "name", "sex", "age", "sibsp", "parch", "ticket", "fare", "cabin", "embarked"]
+    end
+    def headers=(array)
+      @headers = array
+    end
+  end
 
   attr_accessor :raw_attrs, :arr, :survived, :pclass, :name, :sex, :age, :sibsp, :parch, :ticket, :fare, :cabin, :embarked, :predicted
   attr_accessor :my_key
 
-  def initialize(arr)
-    @arr = arr
-    @raw_attrs = Hash[headers.zip(arr)]
-    @raw_attrs.each do |k, v|
+  def initialize(hash)
+    @raw_attrs = hash
+    hash.each do |k, v|
       send("#{k}=", v)
     end
     @answers = {}
@@ -32,16 +39,15 @@ class Passenger
     @parch = val.to_i
   end
 
-  def headers
-    headers = ["survived", "pclass", "name", "sex", "age", "sibsp", "parch", "ticket", "fare", "cabin", "embarked"]
-  end
-
   def survived?
     survived == '1'
   end
 
   def fare=(val)
-    return NO_VAL unless val
+    unless val
+      @fare = -1
+      return
+    end
     @fare = case val.to_i
             when 0..10
               1
@@ -180,51 +186,32 @@ class Passenger
   def embarked=(val)
     @embarked = case val
                 when 'Q'
-                  1
+                  0
                 when 'C'
-                  2
+                  1
                 when 'S'
-                  3
+                  2
                 else
                   NO_VAL
                 end
   end
 
   def gimme(ar)
-#    return @answers[ar] if @answers[ar]
-
-#    @answers[ar] = ar.map{|k| send(k) }
+    # return @answers[ar] if @answers[ar]
+    # @answers[ar] = ar.map{|k| send(k) }
     ar.map{|k| send(k) }
   end
 
-  def precompute_gimme(ar)
-    # (2..ar.count).each do |int|
-    #   ar.combination(int).to_a.each do |foo|
-    #     @answers[foo] = foo.map{|x| send(x) }
-    #   end
-    # end
-  end
 
   def distance_to(user, arr)
     mine = gimme(arr)
     theirs = user.gimme(arr)
-
-    # key = mine.join.to_i
-    # t_k = theirs.join.to_i
-    # if @@user_distances[arr].nil?
-    #   @@user_distances[arr] = []
-    # end
-    # if @@user_distances[arr][key].nil?
-    #   @@user_distances[arr][key] = []
-    # end
-    # if @@user_distances[arr][key][t_k]
-    #   return @@user_distances[arr][key][t_k]
-    # end
-
-    sum_of_squares = mine.zip(theirs).map{|x| x[0] - x[1]}.map{|x| x ** 2}.reduce(:+)
+    begin
+      sum_of_squares = mine.zip(theirs).map{|x| x[0] - x[1]}.map{|x| x ** 2}.reduce(:+)
+    rescue
+      debugger
+    end
     ans = Math.sqrt(sum_of_squares)
-
-#    @@user_distances[arr][key][t_k] = ans
   end
 
   def predicted=(val)
