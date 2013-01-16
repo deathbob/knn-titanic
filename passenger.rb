@@ -29,14 +29,17 @@ class Passenger
 
   def pclass=(val)
     @pclass = val.to_i
+    @pclass = NO_VAL unless val
   end
 
   def sibsp=(val)
     @sibsp = val.to_i
+    @sibsp = NO_VAL unless val
   end
 
   def parch=(val)
     @parch = val.to_i
+    @parch = NO_VAL unless val
   end
 
   def survived?
@@ -44,87 +47,105 @@ class Passenger
   end
 
   def fare=(val)
-    unless val
-      @fare = -1
-      return
-    end
-    @fare = case val.to_i
-            when 0..10
-              1
-            when 10..20
-              2
-            when 20..30
-              3
-            when 30..40
-              4
-            when 40..50
-              5
-            when 50..60
-              6
-            when 60..70
-              7
-            when 70..80
-              8
-            when 80..90
-              9
-            when 90..100
-              10
-            when 100..200
-              12
-            when 200..1000
-              15
-            end
+    @fare = val.to_f
+    @fare = NO_VAL unless val
   end
 
 
   def age=(val)
-    @age = case val.to_i
-           when 0..10
+    @age = val.to_f
+    @age = NO_VAL unless val
+  end
+
+  def sex=(val)
+    @sex = case val
+           when "male"
              0
-           when 10..20
+           when 'female'
              1
-           when 20..30
-             2
-           when 30..40
-             3
-           when 40..50
-             4
-           when 50..60
-             5
-           when 60..70
-             6
-           when 70..80
-             7
-           when 80..90
-             8
-           when 90..100
-             9
-           when 100..1000
-             10
-           else
-             NO_VAL
            end
+    @sex = NO_VAL unless val
+  end
+
+  def embarked=(val)
+    @embarked = case val
+                when 'Q'
+                  0
+                when 'C'
+                  1
+                when 'S'
+                  2
+                end
+    @embarked = NO_VAL unless val
   end
 
   def cabin=(val)
-    @cabin = case val
-             when /a/i
-               0
-             when /b/i
-               1
-             when /c/i
-               2
-             when /d/i
-               3
-             when /e/i
-               4
-             when /f/i
-               5
-             when /g/i
-               6
-             else
-               NO_VAL
-             end
+    @cabin = val
+  end
+
+
+
+
+
+
+
+
+  def normalized_fare
+    case @fare.to_f
+    when 0..10
+      1
+    when 10..20
+      2
+    when 20..30
+      3
+    when 30..40
+      4
+    when 40..50
+      5
+    when 50..60
+      6
+    when 60..70
+      7
+    when 70..80
+      8
+    when 80..90
+      9
+    when 90..100
+      10
+    when 100..200
+      12
+    when 200..1000
+      15
+    end
+  end
+
+  def normalized_age
+    case @age
+    when 1..10
+      0
+    when 10..20
+      1
+    when 20..30
+      2
+    when 30..40
+      3
+    when 40..50
+      4
+    when 50..60
+      5
+    when 60..70
+      6
+    when 70..80
+      7
+    when 80..90
+      8
+    when 90..100
+      9
+    when 100..1000
+      10
+    else
+      NO_VAL
+    end
   end
 
   def cabin_letter
@@ -172,29 +193,6 @@ class Passenger
   end
 
 
-  def sex=(val)
-    @sex = case val
-           when "male"
-             0
-           when 'female'
-             1
-           else
-             NO_VAL
-           end
-  end
-
-  def embarked=(val)
-    @embarked = case val
-                when 'Q'
-                  0
-                when 'C'
-                  1
-                when 'S'
-                  2
-                else
-                  NO_VAL
-                end
-  end
 
   def gimme(ar)
     # return @answers[ar] if @answers[ar]
@@ -220,6 +218,19 @@ class Passenger
     else
       @predicted = 0
     end
+  end
+
+  def last_name
+    name.split(',').first
+  end
+
+  def to_s
+    attrs = [:cabin, :age, :ticket, :last_name, :predicted, :survived, :embarked, :sex, :pclass, :sibsp, :fare, :parch, :cabin_letter, :cabin_number].inject({}) do |memo, x|
+      memo[x] = self.send(x)
+      memo
+    end
+    puts attrs.sort.inspect
+#    puts raw_attrs.sort.inspect
   end
 
 end
