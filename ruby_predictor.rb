@@ -26,11 +26,11 @@ CSV.open("for_processing_test.csv", 'wb') do |csv|
   end
 end
 # also
-#heads = %w[embarked sex pclass sibsp parch]# 0.76555, 763
-#heads = %w[sex pclass fare] # 0.77990, 331
-#heads = %w[sex pclass fare embarked] # 0.75120, 380
+#heads = %w[embarked sex pclass sibsp parch]# 0.76555, 763, k=10
+#heads = %w[sex pclass fare] # 0.77990, 331, k=10
+#heads = %w[sex pclass fare embarked] # 0.75120, 380 k=10
 #heads = %w[sex pclass] # 0.75598, 380 k = 13
-heads = %w[embarked sex pclass sibsp parch]# 0.76555, 763
+heads = %w[embarked sex pclass sibsp parch]#
 k = 9
 
 test_set.each do |user|
