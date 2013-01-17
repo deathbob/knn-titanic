@@ -16,8 +16,6 @@ puts "dead " + dead.count.to_s
 
 
 
-
-
 headers = ["sex", "pclass", "fare", 'sibsp', "age", 'parch', "embarked" ].map(&:intern)
 k = 10
 n = 100
@@ -79,17 +77,17 @@ best_mcc = [0,nil]
       end
       passengers.each do |user|
         tommy = passengers.sort_by{|x| user.distance_to(x, heads)}.reject{|x| x == user}.take(this_k)
-        user.predicted = (tommy.map{|x| x.survived? == true ? 1 : 0}.reduce(:+) / this_k.to_f).round
+        user.predicted = (tommy.map{|x| x.survived}.reduce(:+) / this_k.to_f).round
       end
 
-      right, wrong = passengers.partition{|x| x.predicted.to_s == x.survived}
+      right, wrong = passengers.partition{|x| x.predicted == x.survived}
       percentage = (right.count / passengers.count.to_f)
       percent_wrong = (1.0 - percentage) * 100
       print "\t k=", this_k, " percent_wrong=", percent_wrong, "\n"
 
 
-      true_positive, false_positive = passengers.select{|x| x.predicted == 1}.partition{|x| x.predicted.to_s == x.survived}
-      true_negative, false_negative = passengers.select{|x| x.predicted == 0}.partition{|x| x.predicted.to_s == x.survived}
+      true_positive, false_positive = passengers.select{|x| x.predicted == 1}.partition{|x| x.predicted == x.survived}
+      true_negative, false_negative = passengers.select{|x| x.predicted == 0}.partition{|x| x.predicted == x.survived}
 
 
       tp = true_positive.count

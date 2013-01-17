@@ -27,6 +27,10 @@ class Passenger
     @answers = {}
   end
 
+  def survived=(val)
+    @survived = val.to_i
+  end
+
   def pclass=(val)
     @pclass = val.to_i
     @pclass = NO_VAL unless val
