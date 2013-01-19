@@ -47,7 +47,7 @@ class Passenger
   end
 
   def survived?
-    survived == '1'
+    survived == 1
   end
 
   def fare=(val)
@@ -153,10 +153,16 @@ class Passenger
   end
 
   def cabin_letter
-    @cabin_letter ||= if @raw_attrs['cabin']
+    return @cabin_letter if @cabin_letter
+    bar = if @raw_attrs['cabin']
             foo = @raw_attrs['cabin'].match(/\D/)
             foo[0] if foo
           end
+    @cabin_letter = if bar
+      bar.ord - 64
+    else
+      NO_VAL
+    end
   end
 
   def cabin_number
